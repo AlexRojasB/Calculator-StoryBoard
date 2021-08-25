@@ -7,9 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    let myData = ["first", "second", "third"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,31 @@ class ViewController: UIViewController {
         clearBtn.layer.cornerRadius = 30
         clearBtn.layer.maskedCorners = [.layerMinXMinYCorner]
         
+        let nib = UINib(nibName: "PreviousOperationTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "PreviousOperationTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
-
+    
+    //table funcs
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousOperationTableViewCell", for: indexPath) as! PreviousOperationTableViewCell
+        cell.resultLabel?.text = "\(indexPath.row)"
+        cell.operationLabel?.text = "1 + \(indexPath.row)"
+       
+        // cell.textLabel?.text = myData[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
 
 }
 

@@ -13,6 +13,8 @@
 		A506567C26D3F53C009A4A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A506567A26D3F53C009A4A6A /* Main.storyboard */; };
 		A506567E26D3F53E009A4A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A506567D26D3F53E009A4A6A /* Assets.xcassets */; };
 		A506568126D3F53E009A4A6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A506567F26D3F53E009A4A6A /* LaunchScreen.storyboard */; };
+		A53DC24026D6BA2600D107A6 /* PreviousOperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53DC23E26D6BA2600D107A6 /* PreviousOperationTableViewCell.swift */; };
+		A53DC24126D6BA2600D107A6 /* PreviousOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53DC23F26D6BA2600D107A6 /* PreviousOperationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A506567D26D3F53E009A4A6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A506568026D3F53E009A4A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A506568226D3F53E009A4A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53DC23E26D6BA2600D107A6 /* PreviousOperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOperationTableViewCell.swift; sourceTree = "<group>"; };
+		A53DC23F26D6BA2600D107A6 /* PreviousOperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviousOperationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		A506567326D3F53C009A4A6A /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A53DC23E26D6BA2600D107A6 /* PreviousOperationTableViewCell.swift */,
+				A53DC23F26D6BA2600D107A6 /* PreviousOperationTableViewCell.xib */,
 				A506567426D3F53C009A4A6A /* AppDelegate.swift */,
 				A506567626D3F53C009A4A6A /* SceneDelegate.swift */,
 				A506567826D3F53C009A4A6A /* ViewController.swift */,
@@ -126,6 +132,7 @@
 			files = (
 				A506568126D3F53E009A4A6A /* LaunchScreen.storyboard in Resources */,
 				A506567E26D3F53E009A4A6A /* Assets.xcassets in Resources */,
+				A53DC24126D6BA2600D107A6 /* PreviousOperationTableViewCell.xib in Resources */,
 				A506567C26D3F53C009A4A6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				A506567926D3F53C009A4A6A /* ViewController.swift in Sources */,
 				A506567526D3F53C009A4A6A /* AppDelegate.swift in Sources */,
+				A53DC24026D6BA2600D107A6 /* PreviousOperationTableViewCell.swift in Sources */,
 				A506567726D3F53C009A4A6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
