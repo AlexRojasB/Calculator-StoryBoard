@@ -14,6 +14,7 @@ class PreviousOperationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.transform = transform.rotated(by: 3.14159)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.register(nib, forCellReuseIdentifier: "PreviousOperationTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.transform = tableView.transform.rotated(by: 3.14159)
     }
     
     //table funcs
