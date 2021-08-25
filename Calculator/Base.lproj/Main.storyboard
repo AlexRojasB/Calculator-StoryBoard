@@ -48,36 +48,33 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-L0-Lws">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-L0-Lws">
                                                 <rect key="frame" x="104" y="0.0" width="102.5" height="87.5"/>
                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87.5" id="snX-D4-nYZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="/">
+                                                <state key="normal" image="dividerBtn">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-zX-7xv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-zX-7xv">
                                                 <rect key="frame" x="207.5" y="0.0" width="103" height="87.5"/>
                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87.5" id="DU5-0W-bMj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="x">
+                                                <state key="normal" image="multiplierBtn">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKZ-Et-5ax">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKZ-Et-5ax">
                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="87.5"/>
                                                 <color key="backgroundColor" name="ButtonOperationColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87.5" id="2Gh-t4-V4s"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="&lt;-">
+                                                <state key="normal" image="deleteBtn">
                                                     <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                             </button>
@@ -119,14 +116,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-Vc-Yas">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-Vc-Yas">
                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="87.5"/>
                                                 <color key="backgroundColor" name="ButtonOperationColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87.5" id="ZEI-zD-Wjb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="-">
+                                                <state key="normal" image="minusBtn">
                                                     <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                             </button>
@@ -168,14 +164,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-YJ-aIQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-YJ-aIQ">
                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="87.5"/>
                                                 <color key="backgroundColor" name="ButtonOperationColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="87.5" id="bJ9-jC-u80"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="+">
+                                                <state key="normal" image="plusBtn">
                                                     <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                             </button>
@@ -185,32 +180,39 @@
                                         <rect key="frame" x="0.0" y="265.5" width="414" height="176"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="K96-Tm-5sS">
-                                                <rect key="frame" x="0.0" y="0.0" width="312" height="176"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="176"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dbl-s8-fCO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="87.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-61-PYX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="87.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="87.5" id="fPT-Mt-pJy"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="1">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuV-FK-g0d">
-                                                                <rect key="frame" x="104.5" y="0.0" width="103.5" height="87.5"/>
+                                                                <rect key="frame" x="104" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="87.5" id="39S-AQ-afa"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="2">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8To-nn-wcq">
-                                                                <rect key="frame" x="209" y="0.0" width="103" height="87.5"/>
+                                                                <rect key="frame" x="208" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="87.5" id="Ahd-2e-D6P"/>
+                                                                    <constraint firstAttribute="width" constant="103" id="h1K-7y-egv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="3">
@@ -220,10 +222,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="P94-nY-aJh">
-                                                        <rect key="frame" x="0.0" y="88.5" width="312" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="88.5" width="311" height="87.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIx-th-lwV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="87.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="%">
@@ -231,7 +233,7 @@
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEl-EG-VMh">
-                                                                <rect key="frame" x="104.5" y="0.0" width="103.5" height="87.5"/>
+                                                                <rect key="frame" x="104" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <state key="normal" title="0">
@@ -239,7 +241,7 @@
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvY-Sj-K51">
-                                                                <rect key="frame" x="209" y="0.0" width="103" height="87.5"/>
+                                                                <rect key="frame" x="208" y="0.0" width="103" height="87.5"/>
                                                                 <color key="backgroundColor" name="ButtonNumberColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87.5" id="N9V-wx-cOy"/>
@@ -253,11 +255,10 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zle-cO-N6t">
-                                                <rect key="frame" x="312" y="0.0" width="102" height="176"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zle-cO-N6t">
+                                                <rect key="frame" x="311" y="0.0" width="103" height="176"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="=">
+                                                <state key="normal" image="equalBtn">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -283,6 +284,10 @@
                             <constraint firstItem="2qq-SL-t6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xfo-tf-K0G"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clearBtn" destination="MvL-bc-h2b" id="StY-Yz-1cs"/>
+                        <outlet property="deleteBtn" destination="MKZ-Et-5ax" id="eQ4-bi-hwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +295,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deleteBtn" width="48" height="27"/>
+        <image name="dividerBtn" width="28" height="29"/>
+        <image name="equalBtn" width="28" height="15"/>
+        <image name="minusBtn" width="28" height="3"/>
+        <image name="multiplierBtn" width="23" height="22"/>
+        <image name="plusBtn" width="28" height="28"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.73299998044967651" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
