@@ -15,6 +15,7 @@
 		A506568126D3F53E009A4A6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A506567F26D3F53E009A4A6A /* LaunchScreen.storyboard */; };
 		A53DC24026D6BA2600D107A6 /* PreviousOperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53DC23E26D6BA2600D107A6 /* PreviousOperationTableViewCell.swift */; };
 		A53DC24126D6BA2600D107A6 /* PreviousOperationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53DC23F26D6BA2600D107A6 /* PreviousOperationTableViewCell.xib */; };
+		A53DC24426D75D6D00D107A6 /* HistoryCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53DC24326D75D6D00D107A6 /* HistoryCalculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A506568226D3F53E009A4A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A53DC23E26D6BA2600D107A6 /* PreviousOperationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousOperationTableViewCell.swift; sourceTree = "<group>"; };
 		A53DC23F26D6BA2600D107A6 /* PreviousOperationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviousOperationTableViewCell.xib; sourceTree = "<group>"; };
+		A53DC24326D75D6D00D107A6 /* HistoryCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCalculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				A506567D26D3F53E009A4A6A /* Assets.xcassets */,
 				A506567F26D3F53E009A4A6A /* LaunchScreen.storyboard */,
 				A506568226D3F53E009A4A6A /* Info.plist */,
+				A53DC24326D75D6D00D107A6 /* HistoryCalculation.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				A506567926D3F53C009A4A6A /* ViewController.swift in Sources */,
 				A506567526D3F53C009A4A6A /* AppDelegate.swift in Sources */,
+				A53DC24426D75D6D00D107A6 /* HistoryCalculation.swift in Sources */,
 				A53DC24026D6BA2600D107A6 /* PreviousOperationTableViewCell.swift in Sources */,
 				A506567726D3F53C009A4A6A /* SceneDelegate.swift in Sources */,
 			);
