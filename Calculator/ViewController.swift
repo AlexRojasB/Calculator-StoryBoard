@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var clearBtn: UIButton!
+    @IBOutlet weak var zeroBtn: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var displayLabel: UILabel!
     private var isDecimalPointAdded: Bool = false
@@ -35,6 +37,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.transform = tableView.transform.rotated(by: 3.14159)
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
+        zeroBtn.addGestureRecognizer(longPressRecognizer)
     }
     
     @IBAction func ClearDisplayLabel(_ sender: UIButton) {
@@ -79,12 +84,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    @IBAction func AddDecimal(_ sender: UIButton) {
+    func AddDecimal() {
         if !isDecimalPointAdded {
+            var decimalText = "."
+            if currentNumber == "" {
+                decimalText = "0."
+            }
             isDecimalPointAdded = true
             isANumberNeeded = true
-            displayLabel.text = "\(displayLabel.text!)."
-            currentNumber = "\(currentNumber)."
+            displayLabel.text = "\(displayLabel.text!)\(decimalText)"
+            currentNumber = "\(currentNumber)\(decimalText)"
         }
     }
     
@@ -123,17 +132,52 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    @objc func longPressed(sender: UILongPressGestureRecognizer) {
+        AddDecimal()
+    }
+    
     @IBAction func GetUserInput(_ sender: UIButton) {
         let inputText = sender.titleLabel!.text
         currentNumber = "\(currentNumber)\(inputText!)"
         var displayText = displayLabel.text
         if displayText?.count == 1 && displayText == "0" {
             displayText = ""
+            currentNumber = "\(inputText!)"
         }
         displayLabel.text = "\(displayText!)\(inputText!)"
         if isANumberNeeded {
             isANumberNeeded = false
         }
+    }
+    
+    @IBAction func GetZeroInput(_ sender: UIButton) {
+        let displayText = displayLabel.text
+        if displayText?.count == 1 && displayText == "0" {
+           return
+        }
+        displayLabel.text = "\(displayText!)0"
+        currentNumber = "\(currentNumber)0"
+        if isANumberNeeded {
+            isANumberNeeded = false
+        }
+    }
+    
+    @IBAction func ChangeSignNumber(_ sender: UIButton) {
+        let originalValue = currentNumber
+        let displayText = displayLabel.text!
+        if GetIndexOf(letter: "-", data: currentNumber) != -1 {
+            currentNumber.remove(at: currentNumber.startIndex )
+        }else {
+            currentNumber = "-\(currentNumber)"
+        }
+        
+        if let range = displayText.range(of: originalValue,
+                                         options: [.backwards],
+                   range: nil,
+                   locale: nil) {
+            let stringReplaced = displayText.replacingCharacters(in: range, with: currentNumber)
+            displayLabel.text = stringReplaced
+           }
     }
     
     @IBAction func PerformOperation(_ sender: UIButton) {
@@ -154,7 +198,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             InitialState()
         }
             
-            var currentDisplay = displayLabel.text!
+            let currentDisplay = displayLabel.text!
             var resultString = ""
             if GetIndexOf(letter: ".", data: currentDisplay) > 0 {
                 resultString = "\(result)"
@@ -167,6 +211,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
        InitialState()
     }
+    
+    
     //table funcs
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
