@@ -180,7 +180,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
            }
     }
     
-    @IBAction func PerformOperation(_ sender: UIButton) {
+    @IBAction func PerformPercentage(_ sender: UIButton) {
+        var percentageNumber:Double = 0.0
+        pendingOperation = 2
+        if isAnOperationAdded {
+            
+            if currentNumber == "0" || currentNumber == "" {
+                percentageNumber = 1
+                displayLabel.text = "\(String(describing: displayLabel.text))1%"
+            }else {
+                
+                percentageNumber = Double(currentNumber)!
+            }
+        } else {
+            if currentNumber == "0" || currentNumber == "" {
+                return
+                
+            }
+            
+            percentageNumber = Double(currentNumber)!
+            isAnOperationAdded = true
+            previousNumber = Double(currentNumber)!
+            displayLabel.text = "\(displayLabel.text!)%"
+           
+        }
+        currentNumber = "\(Double(percentageNumber) / Double(100))"
+        
+        isDecimalPointAdded = true
+        PerformOperation(self)
+    }
+    
+    @IBAction func PerformOperation(_ sender: Any) {
         if isAnOperationAdded && !isANumberNeeded {
                 
             var result: Double = 0.0
@@ -200,7 +230,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let currentDisplay = displayLabel.text!
             var resultString = ""
-            if GetIndexOf(letter: ".", data: currentDisplay) > 0 {
+            if GetIndexOf(letter: ".", data: currentDisplay) > 0 || isDecimalPointAdded {
                 resultString = "\(result)"
             } else {
                 resultString = "\(Int(result))"
